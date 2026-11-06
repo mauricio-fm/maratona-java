@@ -1,0 +1,20 @@
+Busca e navegação:
+
+Shift duas vezes: Busca tudo (arquivos, classes, configurações ou ações).
+Ctrl + N: Busca classes no projeto.Ctrl + Shift + N: Busca arquivos pelo nome.
+Ctrl + Shift + F: Busca um texto/termo em todo o projeto.
+Ctrl + E: Abre a lista de arquivos recentes.Edição de códigoAlt + Enter: Mostra ações contextuais (corrige erros e
+aplica correções rápidas).
+Ctrl + Alt + L: Formata o código automaticamente (corrige espaços e indentação).
+Ctrl + Espaço: Ativa o autocompletar básico.
+Ctrl + D: Duplica a linha atual ou o bloco selecionado.
+Ctrl + Y: Deleta a linha atual.
+Ctrl + Shift + Seta para cima/baixo: Move a linha atual para cima ou para baixo.
+
+Refatoração e execução:
+
+Shift + F6: Renomeia arquivos, classes ou variáveis em todo o projeto com segurança.
+Ctrl + Shift + F10: Executa (Run) o código.
+Shift + F9: Inicia o modo Debug.
+Ctrl + F2: Para a execução ou o debug.
+Ctrl+O: Para sobrescrever métodos.

@@ -1,0 +1,39 @@
+Stream e uma forma de processar informacoes de colecoes de dados (List,Set) de uma maneira mais declarativa
+usando operacoes como filter, map, sorted e collect.
+
+Exemplo SEM streams:
+
+    List<String> nomes = List.of("João", "Maria", "Pedro", "Ana");
+
+    for (String nome : nomes) {
+        if (nome.startsWith("A")) {
+            System.out.println(nome);
+        }
+    }
+
+Exemplo COM streams:
+
+    nomes.stream()
+         .filter(nome -> nome.startsWith("A"))
+         .forEach(System.out::println);
+
+Ambos codigos fazem a mesma coisa
+// "filtre a lista de nomes, pegando os nomes que comecam com 'A' e imprime-o"
+
+Os principais metodos sao:
+
+    stream() → cria o Stream
+    filter() → mantém elementos que atendem uma condição
+    map() → transforma elementos
+    sorted() → ordena
+    forEach() → executa algo para cada elemento
+    collect() → coleta o resultado
+    toList() → transforma o resultado em List
+    findFirst() → pega o primeiro resultado
+    findAny() → pega algum resultado
+    anyMatch() → verifica se algum atende
+    allMatch() → verifica se todos atendem
+    noneMatch() → verifica se nenhum atende
+    count() → conta elementos
+    min() / max() → menor/maior
+    reduce() → combina elementos em um único resultado

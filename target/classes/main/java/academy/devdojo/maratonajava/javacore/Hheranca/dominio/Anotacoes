@@ -1,0 +1,13 @@
+Herança e uma forma de extender funcionalidade de uma classe (super-classe) para uma classe filha (sub-classe)
+Quando se extende uma classe que vai ser herdada, a sub-classe deve ter um construtor com os atributos da super-classe
+por meio do super(atributos da super-classe)
+
+EX:
+
+ public Cachorro(String name, int age, String race) {
+        super(name, age); //atributos da super-classe Animal
+        this.race = race;
+ }
+
+Uma coisa importante de herança sobre o protected é, por ele ser mais restritivo do que o public
+caso voce queira acessar um atributo que esteje com ele voce precisa de get.

@@ -1,0 +1,37 @@
+TRY-WITH-RESOURCES
+
+O que é:
+Forma de trabalhar com recursos que precisam ser fechados,
+como arquivos, streams e conexões.
+
+O recurso é criado dentro dos parênteses do try:
+
+try (Leitor1 leitor1 = new Leitor1()) {
+    // usa o recurso
+}
+
+Ao terminar o try, o Java chama `close()` automaticamente.
+
+O recurso precisa implementar `AutoCloseable` ou `Closeable`.
+
+package javacore.Hexception.exception.dominio;
+
+import java.io.Closeable;
+import java.io.IOException;
+
+public class Leitor1 implements Closeable {
+    @Override
+    public void close() throws IOException {
+        System.out.println("Fechando Leitor1");
+    }
+}
+
+Vantagem:
+Evita precisar fechar o recurso manualmente usando `finally`.
+
+Com vários recursos:
+→ são fechados na ordem inversa da criação.
+
+Exemplo:
+Leitor2 é criado → Leitor1 é criado
+Leitor1 é fechado → Leitor2 é fechado

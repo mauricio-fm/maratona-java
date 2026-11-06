@@ -1,0 +1,31 @@
+Uma classe abstrata e incompleta, ela tem a caixa mas nao os valores, o unico objetivo de uma classe abstrata e
+ser extendida, tambem usa protected para os atributos que vao ser extendidas
+
+Classes concretas:
+Uma classe concreta é uma classe normal em Java, que pode ser instanciada (criar objetos dela) e possui
+uma implementação completa dos seus métodos, ao contrario de uma classe abstrata.
+
+Nesse pacote tem duas classes abstratas, a classe Funcionario e a classe Pessoa, na classe Funcionario
+o metodo abstrato e
+public abstract void calculaBonus();
+aqui ele obriga toda classe que herda de Funcionario a ter o metodo calculaBonus()
+aqui por exemplo na classe Desenvolvedor:
+
+public class Desenvolvedor extends Funcionario{
+    public Desenvolvedor(String nome, double salario) {
+        super(nome, salario);
+    }
+
+    @Override
+    public void calculaBonus() {
+        this.salario = this.salario + this.salario * 0.1;
+    }
+
+Metodos Abstratos:
+Se uma classe herda de uma classe abstrata, voce e obrigado a colocar os valores de  todos os metodos abstratos
+de dentro da classe abstrata. Essa e a funcao do metodo abstratos.
+
+Classe Abstrata:
+Uma classe abstrata como essa sao como templates para outras, moldes, temos a classe funcionario e gerente
+mas gerente e um funcionario, entao nao faz sentido serem separados, classes abstras nao podem ter objetos
+e é criada para ser uma super-classe.

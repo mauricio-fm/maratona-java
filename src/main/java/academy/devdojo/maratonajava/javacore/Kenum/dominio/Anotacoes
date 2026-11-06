@@ -1,0 +1,65 @@
+values()
+O values() retorna um array com todos os valores do enum, na ordem em que foram declarados.
+
+Exemplo:
+
+public enum TipoPagamento {
+    DEBITO,
+    CREDITO,
+    PIX
+}
+
+Agora:
+
+TipoPagamento[] tipos = TipoPagamento.values();
+
+for (TipoPagamento tipo : tipos) {
+    System.out.println(tipo);
+}
+
+Saída:
+
+DEBITO
+CREDITO
+PIX
+
+É muito usado para:
+
+Percorrer todos os valores do enum.
+Criar menus.
+Fazer validações.
+valueOf()
+
+O valueOf(String nome) faz o contrário.
+Ele recebe uma String e retorna o valor correspondente do enum.
+
+TipoPagamento tipo = TipoPagamento.valueOf("PIX");
+
+System.out.println(tipo);
+
+Saída:
+
+PIX
+
+Outro exemplo:
+
+String texto = "DEBITO";
+
+TipoPagamento tipo = TipoPagamento.valueOf(texto);
+
+System.out.println(tipo);
+
+Saída:
+
+DEBITO
+Se o valor não existir
+
+Se passar um nome que não existe:
+
+TipoPagamento.valueOf("BOLETO");
+
+O programa lança uma exceção:
+
+IllegalArgumentException
+
+Por isso, quando a String vem do usuário, normalmente é bom validar ou tratar essa exceção.

@@ -1,0 +1,21 @@
+RuntimeException:
+
+NullPointerException(unchecked)       → objeto é null
+ArithmeticException(unchecked)        → erro matemático
+ArrayIndexOutOfBounds(unchecked)      → índice inválido em array
+NumberFormatException(unchecked)      → String não pode virar número
+ClassCastException(unchecked)         → cast incompatível
+IndexOutOfBoundsException             → indice invalido
+
+Exception:
+
+IOException(checked)                → problema de entrada/saída
+
+Error:
+
+StackOverflowError           → Stack cheia
+OutOfMemoryError             → memória insuficiente
+NoClassDefFoundError         → classe não encontrada em execução
+ExceptionInInitializerError  → erro na inicialização de uma classe
+AssertionError               → assert falhou
+LinkageError                 → problema ao carregar/vincular classes

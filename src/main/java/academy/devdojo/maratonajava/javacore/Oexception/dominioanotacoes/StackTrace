@@ -1,0 +1,43 @@
+STACK TRACE
+
+O que é:
+É o registro do caminho que o programa percorreu até o momento
+em que uma exceção aconteceu.
+
+Quando uma exceção ocorre, o Java registra informações sobre:
+- O tipo da exceção.
+- A mensagem do erro.
+- A classe e o método onde ocorreu.
+- A linha exata onde ocorreu.
+- Os métodos que foram chamados até chegar naquele ponto.
+
+e.printStackTrace():
+Imprime o Stack Trace completo da exceção no console.
+
+Exemplo:
+
+try {
+    file.createNewFile();
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+Se ocorrer um erro, o Java pode mostrar:
+
+java.io.IOException: Acesso negado
+    at ExceptionTest01.criarNovoArquivo(ExceptionTest01.java:15)
+    at ExceptionTest01.main(ExceptionTest01.java:8)
+
+Nesse exemplo:
+- IOException → tipo da exceção.
+- "Acesso negado" → mensagem explicando o problema.
+- ExceptionTest01.java:15 → local onde o erro aconteceu.
+- ExceptionTest01.java:8 → método que chamou o método onde o erro ocorreu.
+
+IMPORTANTE:
+O Stack Trace é usado principalmente para descobrir a causa
+e a localização de um erro durante o desenvolvimento.
+
+A primeira linha geralmente mostra o tipo e a mensagem da exceção.
+As linhas seguintes mostram o caminho de chamadas dos métodos
+até chegar ao ponto onde a exceção foi lançada.

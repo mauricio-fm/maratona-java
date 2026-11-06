@@ -1,0 +1,63 @@
+    EXCEPTIONS
+
+O que são:
+Situações anormais que acontecem durante a execução do programa
+e podem interromper seu funcionamento.
+
+Hierarquia:
+Throwable
+├── Exception
+└── Error
+
+Exception:
+Problemas que o programa pode tentar tratar.
+Exemplos: IOException, NullPointerException.
+
+IOException:
+Exceção relacionada a operações de entrada e saída (I/O),
+como arquivos, streams e leitura/escrita de dados.
+
+Error:
+Problemas graves relacionados à JVM ou ao ambiente de execução.
+
+StackOverflowError:
+Acontece quando a pilha de execução (Stack) fica sem espaço,
+geralmente por uma recursão infinita.
+
+Exemplo:
+public static void recursividade() {
+    recursividade();
+}
+
+Checked Exception:
+Exceções verificadas pelo compilador e que precisam ser tratadas
+ou declaradas.
+
+Unchecked Exception:
+Exceções que não precisam ser obrigatoriamente tratadas.
+
+try/catch:
+try → código que pode gerar uma exceção.
+catch → trata a exceção.
+
+THROW
+
+O que é:
+`throw` é usado para lançar uma exceção manualmente.
+
+Exemplo:
+throw new IllegalArgumentException("O nome é obrigatório");
+
+`new` → cria a exceção.
+`throw` → lança a exceção.
+
+Uso:
+Pode ser usado para validar regras do sistema e informar
+quando um dado é inválido.
+
+Exemplo:
+Se o usuário não informar o nome, o sistema lança uma exceção
+avisando que o nome é obrigatório.
+
+Fluxo:
+Dado inválido → `throw` → exceção → `catch` → tratamento do erro.

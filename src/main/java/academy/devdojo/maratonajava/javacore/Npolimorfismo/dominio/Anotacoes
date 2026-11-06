@@ -1,0 +1,62 @@
+Antes de comecar a falar de polimorfismo, e bom saber que vamos usa a arquitetura MVC
+
+Componentes do MVCModel
+(Modelo): Cuida dos dados, das regras do negócio e da conversa com o banco
+de dados.
+View (Visão): Mostra a interface gráfica ou a tela para o usuário (como páginas HTML ou telas de sistema).
+Controller (Controlador): Recebe os cliques ou pedidos do usuário, chama o Model
+para pegar os dados e escolhe qual View mostrar.
+
+Nesse caso:
+
+Modelo é o dominio"
+Visao é o "servico"
+Controlador é o "test"
+
+Polimorfismo:
+O conceito de Polimorfismo e permitir que uma referência de um tipo mais genérico aponte para objetos de diferentes
+tipos, permitindo que cada objeto execute seu próprio comportamento sobrescrito.
+
+Quando usar:
+Quando várias classes possuem um comportamento em comum, mas cada uma precisa executá-lo de
+maneira diferente.
+
+Veja:
+
+public class ProdutoTest02 {
+    public static void main(String[] args) {
+        Produto producer = new Computador("Macintosh", 4500);
+        System.out.println(producer.getNome());
+        System.out.println(producer.getValor());
+    }
+}
+Aqui voce uso o producer (a super-classe) pra apontar para o computador (a sub-classe)
+a referência é do tipo Produto, mas o objeto criado é do tipo Computador.
+Quando um método sobrescrito é chamado, a implementação do objeto real (Computador) é executada.
+
+instanceof:
+Serve para verificar se um objeto é de determinado tipo.
+
+Produto producer = new Computador();
+
+if (producer instanceof Computador) {
+    System.out.println("É um computador");
+}
+
+Aqui você está perguntando:
+"producer realmente aponta para um objeto Computador?"
+
+Resultado: true.
+
+Cast:
+Permite acessar um atributo da subclasse
+A superclasse não acessa diretamente atributos exclusivos da subclasse.
+
+Produto producer = new Computador();
+
+Para acessar, faça cast:
+
+Computador pc = (Computador) producer;
+
+Polimorfismo → métodos sobrescritos.
+Cast → acessar membros específicos da subclasse.

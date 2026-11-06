@@ -1,0 +1,15 @@
+LocalDate
+→ datas sem horário
+→ nascimento, vencimento, pagamento, data de evento
+
+LocalDateTime
+→ data + hora sem fuso
+→ criação de registros, horários de negócio
+
+Instant
+→ instante exato
+→ timestamp, logs, auditoria, banco, APIs
+
+ZonedDateTime
+→ data + hora + fuso
+→ quando fuso realmente importa

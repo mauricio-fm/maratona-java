@@ -1,0 +1,4 @@
+1. Quando esta sobrescrevendo um metodo, voce nao e obrigado a declarar
+as mesmas exception que aquele metodo esta declarando, pois a funcao da
+sobre escrita que voce ta lançando pode ser diferente.
+Voce nao pode colocar exception generica no throws

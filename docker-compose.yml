@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root # usar essa senha quando entrar no workbench
+    ports:
+      - "3307:3306"
+    volumes:
+      - devdojo_maratona_data:/var/lib/mysql
+
+volumes:
+  devdojo_maratona_data:
+
+
+# Comandos do docker no terminal:
+
+#      docker-compose up          # cria e inicia os contêineres dos serviços
+#      docker-compose up -d       # Iniciar em segundo plano
+#      docker-compose stop        # Parar os contêineres, quando for parar, da um ctrl + c e depois o docker-compose stop
+#      docker-compose start       # Reiniciar os contêineres parados, que ja existe, depois do stop
+#      docker-compose down        # Parar e remover os contêineres
+#      docker-compose ps          # Listar contêineres do projeto
+#      docker-compose logs        # Ver logs
+#      docker-compose logs -f     # Acompanhar logs em tempo real
+#      docker ps                  # Listar contêineres ativos
+#      docker ps -a               # Listar todos os contêineres
+#      docker images              # Listar imagens baixadas
+#      docker-compose pull        # Baixar versões atualizadas das imagens
